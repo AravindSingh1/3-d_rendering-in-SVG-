@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Different ctrls</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "/three.module.js",
+                "three/addons/": "./jsm/"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <svg width="100%" height="100%" viewBox="0, 0, 100%, 100%">
+        <g stroke="red">
+            <foreignObject width="300px" height="200px" x="7%" y="2%" requiredExtensions="http://www.w3.org/1999/xhtml">
+
+                <body xmlns="http://www.w3.org/1999/xhtml">
+                    <div class="eachDiv" id="first">
+                        <!-- <label for="file">Select file: </label> -->
+                        <input type="file" name="file" id="fileInput" accept=".glb" class="firstInp">
+                        <input type="button" value="get" id="getBtn">
+                    </div>
+                </body>
+            </foreignObject>
+
+
+            <foreignObject width="300px" height="200px" x="38%" y="2%"
+                requiredExtensions="http://www.w3.org/1999/xhtml">
+
+                <body xmlns="http://www.w3.org/1999/xhtml">
+                    <div class="eachDiv" id="second">
+                        <!-- <label for="file">Select file: </label> -->
+                        <input type="file" name="file" id="fileInput" accept=".glb" class="secondInp">
+                        <input type="button" value="get" id="getBtn">
+                    </div>
+                </body>
+            </foreignObject>
+
+
+            <foreignObject width="300px" height="200px" x="69%" y="2%"
+                requiredExtensions="http://www.w3.org/1999/xhtml">
+
+                <body xmlns="http://www.w3.org/1999/xhtml">
+                    <div class="eachDiv" id="third">
+                        <!-- <label for="file">Select file: </label> -->
+                        <input type="file" name="file" id="fileInput" accept=".glb" class="thirdInp">
+                        <input type="button" value="get" id="getBtn">
+                    </div>
+                </body>
+            </foreignObject>
+
+        </g>
+    </svg>
+</body>
+<script type="module" src="script.js"></script>
+
+</html>

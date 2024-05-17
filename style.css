@@ -1,0 +1,41 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+}
+
+svg{
+    border: 1px solid red;
+}
+
+.eachDiv{
+    /* padding: 20px; */
+    width: 100%;
+    height: 100%;
+    border: 1px solid skyblue;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+#getBtn{
+    display: block;
+    margin: 10px auto;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+input{
+    display: block;
+    margin: 10px auto;
+}
+
