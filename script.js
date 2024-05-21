@@ -20,11 +20,11 @@ function get() {
     const fileCount = selectedFiles.files.length;
     console.log(fileCount);
     for (let i = 0; i < fileCount; i++) {
-        renderAll(i);
+        renderEachDom(i);
     }
 }
 
-function renderAll(i) {
+function renderEachDom(i) {
 
     let camera, scene;
     let hlight, directionalLight;
@@ -33,7 +33,7 @@ function renderAll(i) {
     let g = document.createElementNS("http://www.w3.org/2000/svg", 'g');
 
     var newNode = document.createElementNS("http://www.w3.org/2000/svg", 'foreignObject');
-    let attributesForNewNode = {width:"300px", height:"200px", x:`${350*i}`, y: "0"};
+    let attributesForNewNode = {width:"300px", height:"200px", x:`${50+350*i}`, y: "50"};
     setAttributes(newNode, attributesForNewNode);
     g.appendChild(newNode);
 
@@ -59,10 +59,10 @@ function renderAll(i) {
         fullViewBtn.style.display = "none";
     })
 
-    innit();
+    renderEachFile();
 
 
-    function innit() {
+    function renderEachFile() {
         camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.01, 1000);
         camera.position.set(-5, 2, -5);
 
@@ -123,14 +123,14 @@ function renderAll(i) {
             allScenes[i] = scene;
 
             renderingDiv.appendChild(renderer.domElement);
-            renderingDiv.addEventListener("click", addCtrls);
+            renderingDiv.addEventListener("click", ctrlsHandling);
 
         });
     }
 
 }
 
-function addCtrls(ev) {
+function ctrlsHandling(ev) {
     let div = ev.target.closest(".eachDiv");
     let divId = div.id;
     let Idx = divId[divId.length - 1];
